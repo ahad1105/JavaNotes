@@ -1,0 +1,19 @@
+JDK - Java development kit 
+JRE - Java run time enviroment
+JVM - Java virtual machine 
+
+JVM is a part of JRE and JRE is a part of JDK 
+
+Java is WORA - write once run anywhere
+
+Flow of execution -->  write the code in .java file -> goes to java compiler(java c) where it is converted to byte code -> after conversion to bytecode it is .class file -> it goes to JVM , the jvm looks for main method 
+which is a particular method signature -> JVM runs it using JRE which provides an enviroment having extra libraries. 
+
+JVM and JRE are on top of your OS and hardware
+
+Jshell -> is java shell that can be run on cmd , it produces one line output
+
+To do any action in java we need methods
+
+Java is object orienanted it needs a class
+
