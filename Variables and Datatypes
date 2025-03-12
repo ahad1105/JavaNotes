@@ -24,3 +24,32 @@ Datatypes
 6. **double**: Approximately ±1.79769313486231570E+308 (15 significant decimal digits)
 7. **char**: 0 to 65,535 (unsigned)
 
+
+Literals in Java are used to represent constant values directly in the code. They are helpful for:
+
+- Initializing variables with specific values.
+- Defining constants that remain unchanged throughout the program.
+- Making the code more readable and understandable by showing explicit values.
+
+
+public class Literals
+{
+
+    public static void main(String args[])
+    {
+        char ch = 'A';
+        ch++;
+        System.out.println(ch);
+    }
+}
+
+output -> B
+we can increment char values , we can treat them as int 
+
+examples of literals :
+nteger literals: 3, 4
+Character literals: 'a' (if it were included)
+String literals: "Hello", "result"
+
+
+
