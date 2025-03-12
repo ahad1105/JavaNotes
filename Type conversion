@@ -1,0 +1,76 @@
+class Main {
+    public static void main(String[] args) {
+        byte b = 126;
+        int a = 345;
+        b = a;
+        
+        System.out.println(a);
+    }
+}
+
+output : we are trying to assign int value to byte , vice versa will work , but this will not and will give following error no matter what the value of int is
+
+incompatible types: possible lossy conversion from int to byte
+
+
+Implicit Conversion (Widening Conversion)
+Implicit conversion happens automatically when converting a smaller data type to a larger one.
+
+Java
+int num = 10;
+double d = num;  // int to double conversion
+System.out.println(d);  // Output: 10.0
+Explicit Conversion (Narrowing Conversion)
+Explicit conversion requires casting when converting a larger data type to a smaller one.
+
+Java
+double d = 10.5;
+int num = (int) d;  // double to int conversion
+System.out.println(num);  // Output: 10
+In the first example, the integer num is automatically converted to a double. In the second example, the double d is explicitly cast to an integer.
+
+
+Type promotion - Type promotion occurs when values of smaller data types are automatically converted to larger data types during an operation.
+example : 
+class TypePromotionExample {
+    public static void main(String[] args) {
+        byte a = 10;
+        bye b = 20;
+        int result = a + b;  // byte 'a' is promoted to int as result is bigger than byte value;
+        System.out.println("Result: " + result);  // Output: 30
+    }
+}
+
+//explicit conversion
+
+class ExplicitConversion {
+    public static void main(String[] args) {
+        float d = 10.5f;
+        int f = (int)d;  // double to float conversion
+        System.out.println("Float value: " + f);  // Output: 10.5
+    }
+}
+
+output - 10
+
+
+//explicit conversion of int to byte:
+
+class ExplicitConversion {
+    public static void main(String[] args) {
+        int i = 278;
+        byte b = (byte)i;
+        
+        System.out.println(b);  
+    }
+}
+
+output - 22 -> it will divide the imput 278 using modulus operator with range of byte values 
+
+
+
+
+
+
+
+
