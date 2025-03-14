@@ -1,0 +1,61 @@
+Ternary Operator
+
+
+class Main {
+    public static void main(String[] args) {
+        
+        int a = 155;
+        int b = 177;
+        int c = 100;
+
+        if(a>b)
+        {
+          System.out.println(10);
+        }
+        else
+        {
+          System.out.println(20);
+        }
+}}
+
+
+
+        int result = a>b ? 10 : 20;   // shorter lines of code then traditional if else
+        System.out.println(result);
+
+//ternary operator for printing string
+
+public class Main {
+    public static void main(String[] args) {
+        
+        int a = 5;
+        int b = 7;
+        
+        // Using ternary operator for printing directly
+        System.out.println(true ? "Nigga what?" : "Bum nigga");
+        System.out.println(true ? "Nigga who?" : "Bum nigga");
+    }
+}
+
+largest of three numbers using ternary operator
+
+public class Main {
+    public static void main(String[] args) {
+        
+        int number = -5;
+        
+        // Using ternary operator to check if the number is positive, negative, or zero
+        String result = (number > 0) ? "Positive" : (number < 0) ? "Negative" : "Zero";
+        
+        System.out.println("The number is: " + result);
+    }
+}
+
+
+  
+
+        
+        
+        
+        
+
