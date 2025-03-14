@@ -1,0 +1,38 @@
+examples 
+
+class Main {
+    public static void main(String[] args) {
+        int number = 10;
+
+        // if-else statement
+        if (number > 0) {
+            System.out.println("The number is positive.");
+        } else {
+            System.out.println("The number is negative or zero.");
+        }
+    }
+}
+
+
+class Main {
+    public static void main(String[] args) {
+        int num1 = 5;
+        int num2 = 3;
+
+        // if-else statement with logical operators
+        if (num1 > 0 && num2 > 0) {
+            System.out.println("Both numbers are positive.");
+        } else if (num1 > 0 || num2 > 0) {
+            System.out.println("At least one number is positive.");
+        } else {
+            System.out.println("Both numbers are non-positive.");
+        }
+    }
+}
+
+//we can skip curly braces if we have only one statement but would need curly braces if more than one statement is if else block , otherwise we will get else withouth if error 
+//In programming, you can directly use boolean constants (true or false) in control flow statements like if, while, etc.
+
+
+
+
