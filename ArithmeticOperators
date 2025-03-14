@@ -1,0 +1,58 @@
+//Airthmetic operators
+
+class Main {
+    public static void main(String[] args) {
+        int num1 = 5;
+        int num2 = 3;
+
+        // Arithmetic operators
+        int add = num1 + num2;
+        int subtract = num1 - num2;
+        int division = num1 / num2;
+        int remainder = num1 % num2;
+        int product = num1 * num2;
+        int quotient = num1 / num2;
+
+        System.out.println("Addition: " + add);
+        System.out.println("Subtraction: " + subtract);
+        System.out.println("Division: " + division);
+        System.out.println("Remainder: " + remainder);
+        System.out.println("Product: " + product);
+        System.out.println("Quotient: " + quotient);
+    }
+}
+
+different ways of incrementing a number
+int num = num + 1;
+int num = num + 2;
+num += 1; --> same as num = num + 1
+num *= 1;
+num /= 1;
+num %= 1;
+num -= 1;
+
+
+In both mathematics and programming, the modulo operation (a % b) returns (a) when (a < b), as (a) doesn't fully divide into (b), so the remainder is (a) itself.
+
+postfix -> num++ -> assignment then increment
+prefix -> ++num -> increment then assignment
+
+examples
+
+class Main {
+    public static void main(String[] args) {
+        int num1 = 5;
+        int num2 = 6;
+        
+        int value_pre = ++num1;
+        int value_post = num2++;
+        //Arithmetic operators
+        //num1++;
+        
+        System.out.println(value_pre);
+        System.out.println(value_post);
+        
+        
+    }
+}
+
