@@ -35,4 +35,27 @@ class Main {
 
 
 
+if else if statements
+
+class Main {
+    public static void main(String[] args) {
+        
+        int a = 155;
+        int b = 177;
+        int c = 100;
+        
+        if(a>b && a>c)
+            System.out.println("a is greatest");
+        else if(b>c)
+            System.out.println("b is greatest");
+        else
+            System.out.println("c is greatest");
+    
+        
+        
+        
+        
+    }
+}
+
 
