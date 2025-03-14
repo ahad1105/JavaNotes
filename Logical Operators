@@ -1,0 +1,48 @@
+example
+
+class Main {
+    public static void main(String[] args) {
+        
+        int a = 5;
+        int b = 7;
+        int c = 8;
+        int d = 12;
+        
+        //and operator
+        boolean result = a > b && c<d;
+        System.out.println(result);
+        
+        //nor operator
+        boolean result2 = a<b || c<d;
+        System.out.println(result2);
+        
+        //not operator
+        System.out.println(!result2);
+        
+        
+        
+    }
+}
+
+can use more than one expression to compare such as 
+boolean result = a > b && c<d && c>1;
+boolean result = a > b && c<d || c>1;
+
+
+
+Truth table of AND, OR, NOT operator
+
+AND (A AND B)
+True only if both A and B are true.
+OR (A OR B)
+True if at least one of A or B is true.
+NOT (NOT A, NOT B)
+Inverts the value:
+If A is true → NOT A is false.
+If A is false → NOT A is true.
+
+
+OR operator is like a short circuit if we want to check for true values 
+AND operator is like a short circuit if we want to check for false values
+
+
