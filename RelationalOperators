@@ -1,0 +1,22 @@
+class Main {
+    public static void main(String[] args) {
+        int num1 = 5;
+        int num2 = 3;
+
+        // Relational operators
+        boolean isEqual = num1 == num2;       // Checks if num1 is equal to num2
+        boolean isNotEqual = num1 != num2;    // Checks if num1 is not equal to num2
+        boolean isGreater = num1 > num2;      // Checks if num1 is greater than num2
+        boolean isLess = num1 < num2;         // Checks if num1 is less than num2
+        boolean isGreaterOrEqual = num1 >= num2; // Checks if num1 is greater than or equal to num2
+        boolean isLessOrEqual = num1 <= num2;    // Checks if num1 is less than or equal to num2
+
+        System.out.println("num1 == num2: " + isEqual);
+        System.out.println("num1 != num2: " + isNotEqual);
+        System.out.println("num1 > num2: " + isGreater);
+        System.out.println("num1 < num2: " + isLess);
+        System.out.println("num1 >= num2: " + isGreaterOrEqual);
+        System.out.println("num1 <= num2: " + isLessOrEqual);
+    }
+}
+
