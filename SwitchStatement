@@ -66,3 +66,59 @@ class Main
        
     }    
 }
+
+
+
+
+
+//Switch statement new syntax
+
+import java.util.Scanner;
+class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        switch(s)
+        {
+            case "Ahad" -> System.out.println("Monday");
+                
+            case "Khan" -> System.out.println("Tuesday");
+               
+            case "Ali" -> System.out.println("Wednesday");
+                
+            default -> System.out.println("invalid value");
+               
+        }
+       
+       
+    }    
+}
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+class Main
+{
+    public static void main(String args[])
+    {
+        
+        String s = "Ahad";
+        String result = "";
+        switch(s)
+        {
+            case "Ahad" -> result = "6am";
+                
+            case "Khan" -> result = "7am";
+               
+            case "Ali" -> result = "8am";
+                
+            default -> result = "invalid value";
+               
+        }
+        System.out.println(result);
+       
+       
+    }    
+}
