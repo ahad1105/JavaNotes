@@ -1,0 +1,33 @@
+public class ForLoopExample {
+    public static void main(String[] args) {
+        // A simple for loop that prints numbers from 1 to 5
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(i);
+        }
+    }
+}
+
+
+
+public class WhileLoopExample {
+    public static void main(String[] args) {
+        int i = 1;
+        // A simple while loop that prints numbers from 1 to 5
+        while (i <= 5) {
+            System.out.println(i);
+            i++;
+        }
+    }
+}
+
+
+//Which loop to use and when : 
+1)If we know start and end condition - we use for loop
+2)When we dont want know the start and end condition we use  while loop  -- use for using reading file or database 
+3)Even if condition is false and we want to execute something atleast once then we will use do while loop 
+
+
+
+
+
+
