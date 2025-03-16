@@ -1,0 +1,114 @@
+OOPS concept 
+
+class - blueprint of an object.
+
+every object knows something and every object does something 
+
+
+//Example 1
+
+class Animal
+{
+    String animal_name = "Elephant";
+    
+    public String animal_type()
+    {
+        System.out.println("This is a cheetah");
+        return "cheetah";
+    }
+}
+
+
+
+ class Main {
+    public static void main(String args[]) {
+        
+    Animal a1 = new Animal();
+    a1.animal_type();
+        
+    }
+}
+
+
+
+//Example 2
+
+import java.util.Scanner;
+class Animal
+{
+	String animal_name = "Elephant";
+
+	public String animal_type()
+	{
+		System.out.println("This is a cheetah");
+		return "cheetah";
+	}
+
+	public int animal_age()
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the age: ");
+		int age = sc.nextInt();
+		return age;
+	}
+}
+
+
+
+class Main {
+	public static void main(String args[]) {
+
+		Animal a1 = new Animal();
+		a1.animal_type();
+		int age = a1.animal_age();
+		System.out.println("The age of the animal is " +age);
+		System.out.println("The other animal we have is " +a1.animal_name);
+
+
+	}
+}
+
+
+//Example 3
+
+import java.util.Scanner;
+class Animal
+{
+	String animal_name = "Elephant";
+
+	public String animal_type()
+	{
+		System.out.println("This is a cheetah");
+		return "cheetah";
+	}
+
+	public int animal_age()
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the age: ");
+		int age = sc.nextInt();
+		return age;
+	}
+	
+	public String animal_state(String state)
+	{
+	    System.out.println("The state of the animal is" +state);
+	    return state;
+	}
+}
+
+
+
+class Main {
+	public static void main(String args[]) {
+
+		Animal a1 = new Animal();
+		a1.animal_type();
+		int age = a1.animal_age();
+		System.out.println("The age of the animal is " +age);
+		System.out.println("The other animal we have is " +a1.animal_name);
+		a1.animal_state(" Maharashtra");
+
+
+	}
+}
