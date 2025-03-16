@@ -1,0 +1,80 @@
+class Number
+{
+    public String value()
+    {
+        System.out.println("This is a correct string");
+        return "wrong value";
+    }
+    public String wrong_value()
+    {
+        System.out.println("This is a correct value");
+        return "correct";
+    }
+    public int correct_value(int value)
+    {
+        if(value>10)
+            System.out.println("This is right value");
+        else
+            System.out.println("This is wrong value");
+        
+        return value;
+    }
+}
+
+class Main
+{
+    public static void main(String args[])
+    {
+        Number n1 = new Number();
+        n1.value();
+        n1.wrong_value();
+        System.out.println(n1.correct_value(7));
+    }
+    
+}
+
+
+//Method overloading - methods having same name but different parameter is known as method overloading
+
+ //example 
+class Maths
+{
+    public int add(int n1, int n2)
+    {
+        return n1 + n2;
+       
+    }
+    
+    public int subract(int n1, int n2, int n3)
+    {
+        return n1 - n2 - n3;
+       
+    }
+    
+    public int multiply(int n1 , int n2, int n3 , int n4)
+    {
+        return n1*n2*n3*n4;
+    }
+}    
+    
+    
+class Main
+    {
+    
+    public static void main(String args[])
+    {
+        Maths m1 = new Maths();
+        int result_add = m1.add(3,4);
+        int result_sub = m1.subract(3,4,5);
+        int result_prod = m1.multiply(4,5,6,7);
+        System.out.println(result_add);
+        System.out.println(result_sub);
+        System.out.println(result_prod);
+        
+    }
+    
+}
+
+
+
+
