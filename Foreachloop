@@ -1,0 +1,20 @@
+//for loop
+        for(int i=0;i<=arr1.length-1;i++)
+        {
+            System.out.println(arr1[i]);
+        }
+        
+//for each loop 
+        for(int n : arr1)
+        {
+            System.out.println(n);
+        }
+
+
+### Benefits of `for-each` Loop over Traditional `for` Loop:
+
+1. **Simplified Syntax**: The `for-each` loop provides a more concise and readable way to iterate through collections and arrays.
+2. **Reduced Errors**: It minimizes the risk of errors related to index manipulation, such as off-by-one errors.
+3. **Ease of Use**: Ideal for iterating through all elements when the index is not needed.
+
+      
