@@ -26,8 +26,16 @@ public class Main
         {
             System.out.println(arr[i]);
         }
-        
-        
-        
-    }
+
+ }
 }
+
+
+
+
+Drawbacks of an array
+
+1)We cannot change the size of an array because it already allocates continous memory in heap - Memory Allocation: Arrays allocate a contiguous block of memory, which means all elements are stored in a single block. Increasing the size of an array would require allocating a new block of memory and copying the elements, which can be inefficient.
+2)Cannot store different type of elements 
+3)Can only be used for same type of elements and fixed size 
+
