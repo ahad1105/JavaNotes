@@ -1,0 +1,64 @@
+//jagged array is an array where you have fixed columns but not fixed rows , so it can 3 arrays of different sizes each 
+
+class Main {
+    public static void main(String args[]) {
+        // Declaring a jagged array with 2 rows
+        int[][] arr = new int[2][];
+        
+        // Initializing each row with different lengths
+        arr[0] = new int[2];  // Row 0 has 2 elements
+        arr[1] = new int[3];  // Row 1 has 3 elements
+        
+        // Filling the jagged array with random numbers (0 to 99)
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                arr[i][j] = (int) (Math.random() * 100); // Random number between 0-99
+            }
+        }
+
+        // Printing the jagged array
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println(); // Move to next line after each row
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+3D Array
+
+
+class Main {
+    public static void main(String args[]) {
+        // Declaring and initializing a 3D array
+        int[][][] arr = {
+            { {1, 2}, {3, 4} }, 
+            { {5, 6}, {7, 8} } 
+        };
+
+        // Printing the 3D array
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                for (int k = 0; k < arr[i][j].length; k++) {
+                    System.out.print(arr[i][j][k] + " ");
+                }
+                System.out.println(); // Move to next row
+            }
+            System.out.println(); // Separate 2D layers
+        }
+    }
+}
+
