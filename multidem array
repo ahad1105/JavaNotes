@@ -1,0 +1,91 @@
+//multi dem array - array of arrays
+
+*assiging values by themselves
+
+
+class Main {
+    
+        public static void main(String args[])
+        {
+        String arr[][] = new String[2][2];
+        arr[0][0] = "gay nigga";
+        arr[0][1] = "dumb nigga";
+        arr[1][0] = "yes nigga";
+        arr[1][1] = "no nigga";
+        
+        for(int i=0;i<2;i++)
+        {
+            for(int j = 0;j<2;j++)
+            {
+                System.out.println(arr[i][j]);
+            }
+        }
+    }
+}
+
+
+generating random numbers using random math.random
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    
+        public static void main(String args[])
+        {
+        int arr[][] = new int[2][2];
+        arr[0][0] = 1;
+        arr[0][1] = 2;
+        arr[1][0] = 3;
+        arr[1][1] = 4;
+        
+        
+        
+        for(int i=0;i<2;i++)
+        {
+            for(int j = 0;j<2;j++)
+            {
+               arr[i][j] = (int)(Math.random()*10);
+            }
+        }
+        
+        
+        
+        for(int i=0;i<2;i++)
+        {
+            for(int j = 0;j<2;j++)
+            {
+                System.out.println(arr[i][j]);
+            }
+        }
+    }
+}
+
+//using an enhanced for loop
+
+class Main {
+    public static void main(String args[]) {
+        int arr[][] = new int[2][2];
+
+        // Populating the array with random numbers between 0-9
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                arr[i][j] = (int) (Math.random() * 10);
+            }
+        }
+
+        // Printing the 2D array correctly
+        for (int[] m : arr) {
+            for (int n : m) {
+                System.out.print(n + " "); // Print numbers instead of array reference
+            }
+            System.out.println(); // Move to the next line after printing a row
+        }
+    }
+}
+
+
+
+
+
