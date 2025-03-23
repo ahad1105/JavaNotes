@@ -1,0 +1,31 @@
+//String is a collection of characters 
+
+
+### **Mutable vs Immutable Strings in Java (Quick Summary)**  
+
+Immutable Strings (String):
+
+Once created, cannot be modified.
+
+Any modification creates a new object in memory.
+
+Example:
+StringBuilder sb = new StringBuilder("Hello");
+sb.append(" World");  // Modifies existing object
+
+Mutable Strings (StringBuilder & StringBuffer):
+
+Can be modified without creating a new object.
+
+StringBuilder: Faster but not thread-safe.
+
+StringBuffer: Slower but thread-safe.
+
+
+
+| Feature         | `String` (Immutable) | `StringBuilder` / `StringBuffer` (Mutable) |
+|---------------|---------------------|----------------------------------|
+| Modification  | Creates new object | Modifies existing object |
+| Performance  | Slower (More memory) | Faster (Better performance) |
+| Thread Safety | Yes | `StringBuffer` - Yes, `StringBuilder` - No |
+
