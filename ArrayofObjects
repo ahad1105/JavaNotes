@@ -1,0 +1,49 @@
+class Students
+{
+    int marks;
+    String name;
+    int age;
+}
+
+
+class Main {
+    public static void main(String args[]) {
+        
+        Students s1 = new Students();
+        s1.marks = 30;
+        s1.name = "Ahad";
+        s1.age = 26;
+        
+        Students s2 = new Students();
+        s2.marks = 45;
+        s2.name = "Bukayo";
+        s2.age = 23;
+        
+        Students s3 = new Students();
+        s3.marks = 56;
+        s3.name = "Gabriel";
+        s3.age = 25;
+        
+        Students data[] = new Students[3];
+        data[0] = s1;
+        data[1] = s2;
+        data[2] = s3;
+        
+        System.out.println("Printing the data:");
+        for(int i=0;i<data.length;i++)
+        {
+            System.out.println("the name is " +data[i].name+ " and his age is " +data[i].age+ " and he got " +data[i].marks+ " marks");
+        }
+        
+        
+        
+        
+        
+    }
+}
+
+
+
+//we always have to define the objects 
+//we can store these objects in an array and print through them 
+
