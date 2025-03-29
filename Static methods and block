@@ -1,0 +1,115 @@
+Instance method - method which is not having a static keyword, to call instance methods we need to create object of it
+
+we cannot use a non static vairable inside a static variable 
+
+to call main method we dont need object of demo
+
+example code
+
+
+public class StaticExample {
+    // static method
+    public static void staticMethod() {
+        System.out.println("This is a static method.");
+    }
+
+    // non-static method
+    public void nonStaticMethod() {
+        System.out.println("This is a non-static method.");
+    }
+
+    public static void main(String[] args) {
+        // calling the static method
+        StaticExample.staticMethod();
+
+        // creating an instance to call the non-static method
+        StaticExample example = new StaticExample();
+        example.nonStaticMethod();
+    }
+}
+
+
+Static block
+
+
+// Java program demonstrating a static block with variables
+class Company {
+    
+    // Static variables (shared by all objects of the class)
+    static String companyName;
+    static String location;
+    static int employees;
+
+    // Static block - initializes static variables
+    static {
+        companyName = "Baker Hughes";
+        location = "Powai";
+        employees = 500;
+        System.out.println("Static block executed! Company details initialized.");
+    }
+
+    // Main method - runs after the static block
+    public static void main(String[] args) {
+        System.out.println("Main method executed!");
+        System.out.println("Company Name: " + companyName);
+        System.out.println("Location: " + location);
+        System.out.println("Number of Employees: " + employees);
+    }
+}
+
+//Java program demonstrating a static block with static variables 
+
+// Java program demonstrating static and instance variables/methods
+class Company {
+    
+    // Static variables (shared by all objects)
+    static String companyName;
+    static String location;
+    
+    // Instance variables (specific to each object)
+    String employeeName;
+    int employeeID;
+
+    // Static block - initializes static variables
+    static {
+        companyName = "Baker Hughes";
+        location = "Powai";
+        System.out.println("Static block executed! Company details initialized.");
+    }
+
+    // Constructor to initialize instance variables
+    Company(String name, int id) {
+        this.employeeName = name;
+        this.employeeID = id;
+    }
+
+    // Static method (can access only static variables)
+    static void displayCompanyInfo() {
+        System.out.println("Company Name: " + companyName);
+        System.out.println("Location: " + location);
+    }
+
+    // Instance method (can access both static and instance variables)
+    void displayEmployeeInfo() {
+        System.out.println("Employee Name: " + employeeName);
+        System.out.println("Employee ID: " + employeeID);
+    }
+
+    // Main method - program execution starts here
+    public static void main(String[] args) {
+        // Call static method without creating an object
+        displayCompanyInfo();
+
+        // Creating objects (employees)
+        Company emp1 = new Company("Alice", 101);
+        Company emp2 = new Company("Bob", 102);
+
+        // Calling instance methods to display employee details
+        emp1.displayEmployeeInfo();
+        emp2.displayEmployeeInfo();
+    }
+}
+
+
+
+
