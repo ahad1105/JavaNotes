@@ -29,3 +29,33 @@ StringBuffer: Slower but thread-safe.
 | Performance  | Slower (More memory) | Faster (Better performance) |
 | Thread Safety | Yes | `StringBuffer` - Yes, `StringBuilder` - No |
 
+
+
+StringBuffer vs StringBuilder 
+
+StringBuffer is thread safe , string builder is not
+
+public class Demo {
+    public static void main(String a[]) {
+        StringBuffer sb = new StringBuffer("Navin");
+        sb.append(" Reddy");
+
+        sb.insert(6, "Java ");
+        sb.setLength(30);
+
+        System.out.println(sb);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
