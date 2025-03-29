@@ -1,0 +1,64 @@
+Local variable - variable created inside a class
+Instance variable - variable created inside a method 
+
+Static means it will be shared by all the objects and it will be common for all the objects
+so if we change the value for it , it will affect all the objects 
+
+Static variables should be called by the method name 
+
+We can also create static variables in non static methods as well 
+
+Static belongs to a class member not a object member
+
+We are saving memory , not every member will have own copy for it 
+
+Examples :
+
+class Company
+{
+    String name = "Baker Hughes";
+    String area = "Powai";
+    int pincode = 400072;
+}
+class Main {
+    public static void main(String[] args) {
+       Company c1 = new Company();
+       c1.name;
+       
+    }
+}
+
+//observation --> java will give error because c1.name is a standalone statement it means do something type so we must return it with printing it using system.out.println.
+
+
+
+use of static keyword 
+
+
+
+class Company
+{
+    String name = "Baker Hughes";
+    String area = "Powai";
+    static int pincode = 400072;   //since pincode is same for both the company ,  its static variable
+    
+    public void data()
+    {
+        System.out.println("The company name is " +name+ "\nThe company is in " +area+ "\nThe company is having pincode as " +pincode);
+    }
+    
+    
+}
+class Main {
+    public static void main(String[] args) {
+       Company c1 = new Company();
+       c1.data();
+       Company c2 = new Company();
+       System.out.println("*******printing new company info******");
+       c2.name = "Citiustech";
+       c2.area = "LNT";
+       //Company.pincode = 400072;    //no need to print this as it will take from first object only and it knows it common for all and they should be called with thier class names
+       c2.data();
+       
+    }
+}
