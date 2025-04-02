@@ -1,0 +1,27 @@
+class Data
+{
+    private String name;   //two private variables 
+    private int age;
+    
+    public void setname(String n)  //to demo encapsulation best way is to call them using getters and setters
+    {
+        name = n;
+    }
+    
+    public String getname()
+    {
+        return name;
+    }
+    
+    
+}
+
+
+class Main {
+    public static void main(String[] args) {
+        Data d = new Data();
+        d.setname("Ahad");
+        System.out.println(d.getname());
+       
+    }
+}
