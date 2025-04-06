@@ -1,0 +1,106 @@
+// Package: com.example.vehicles
+package com.example.vehicles;
+
+// Enum (with UPPER_SNAKE_CASE for constants)
+public enum Direction {
+    NORTH, EAST, SOUTH, WEST;
+}
+
+// Class (PascalCase)
+public class Car {
+    
+    // Constants (UPPER_SNAKE_CASE)
+    public static final int MAX_SPEED = 200;
+    public static final String VEHICLE_TYPE = "Car";
+    
+    // Instance Variables (camelCase)
+    private String make;
+    private String model;
+    private int speed;
+    private boolean isRunning;
+    
+    // Constructor (PascalCase, same as class name)
+    public Car(String make, String model) {
+        this.make = make;  // 'this' refers to instance variables
+        this.model = model;
+        this.speed = 0;  // Default speed
+        this.isRunning = false;  // Default state
+    }
+    
+    // Method to start the car (camelCase)
+    public void startCar() {
+        if (!this.isRunning) {
+            this.isRunning = true;
+            System.out.println("The " + this.make + " " + this.model + " is now running.");
+        } else {
+            System.out.println("The car is already running.");
+        }
+    }
+    
+    // Method to stop the car (camelCase)
+    public void stopCar() {
+        if (this.isRunning) {
+            this.isRunning = false;
+            this.speed = 0;
+            System.out.println("The " + this.make + " " + this.model + " has stopped.");
+        } else {
+            System.out.println("The car is already stopped.");
+        }
+    }
+    
+    // Method to accelerate the car (camelCase)
+    public void accelerate(int increment) {
+        if (this.isRunning) {
+            this.speed += increment;
+            if (this.speed > MAX_SPEED) {
+                this.speed = MAX_SPEED;  // Cap the speed at MAX_SPEED
+            }
+            System.out.println("The car is now going " + this.speed + " km/h.");
+        } else {
+            System.out.println("You need to start the car first.");
+        }
+    }
+    
+    // Method to display car details (camelCase)
+    public void displayCarDetails() {
+        System.out.println("Car Make: " + this.make);
+        System.out.println("Car Model: " + this.model);
+        System.out.println("Speed: " + this.speed + " km/h");
+        System.out.println("Is Running: " + (this.isRunning ? "Yes" : "No"));
+    }
+    
+    // Method to get the car's make (camelCase)
+    public String getMake() {
+        return this.make;
+    }
+
+    // Method to set the car's model (camelCase)
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    // Main method (camelCase, entry point)
+    public static void main(String[] args) {
+        // Create a new Car object
+        Car myCar = new Car("Toyota", "Corolla");
+
+        // Display initial car details
+        myCar.displayCarDetails();
+
+        // Start the car
+        myCar.startCar();
+
+        // Accelerate the car
+        myCar.accelerate(50);
+
+        // Stop the car
+        myCar.stopCar();
+
+        // Display updated car details
+        myCar.displayCarDetails();
+
+        // Demonstrating the use of Direction enum
+        Direction myDirection = Direction.NORTH;
+        System.out.println("The car is heading: " + myDirection);
+    }
+}
