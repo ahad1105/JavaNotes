@@ -1,0 +1,76 @@
+
+inheritance example 
+
+class Animal {
+    int age = 7;
+    String name = "Ahad";
+    
+    // Renamed methods to avoid conflict with variables
+    public void printName() {
+        System.out.println("The name of the animal is " + name);
+    }
+    
+    public void printAge() {
+        System.out.println("The age of the animal is " + age);
+    }
+}
+
+class SubAnimal extends Animal {
+    // Main method inside SubAnimal class
+    public static void main(String args[]) {
+        // Creating an instance of Animal
+        Animal a1 = new Animal();
+        a1.printName();  // Calling printName from Animal class
+        
+        // Creating an instance of SubAnimal
+        SubAnimal s1 = new SubAnimal();
+        s1.printName();  // Calling printName from Animal class (inherited)
+    }
+}
+
+
+multilevel inheritance 
+
+// Base class A
+class Animal {
+    // Instance variable of Animal class
+    String name = "Animal";
+
+    // Method of Animal class
+    public void printName() {
+        System.out.println("This is an animal: " + name);
+    }
+}
+
+// Derived class B inherits from Animal
+class Mammal extends Animal {
+    // Instance variable of Mammal class
+    String type = "Mammal";
+
+    // Method of Mammal class
+    public void printType() {
+        System.out.println("This is a mammal: " + type);
+    }
+}
+
+// Further derived class C inherits from Mammal, which is derived from Animal
+class Dog extends Mammal {
+    // Instance variable of Dog class
+    String breed = "Labrador";
+
+    // Method of Dog class
+    public void printBreed() {
+        System.out.println("This is a " + breed + " dog.");
+    }
+
+    // Main method to run the code
+    public static void main(String[] args) {
+        // Creating an object of Dog class
+        Dog dog = new Dog();
+        
+        // Calling methods from Animal, Mammal, and Dog classes
+        dog.printName();  // Inherited from Animal class
+        dog.printType();  // Inherited from Mammal class
+        dog.printBreed(); // Defined in Dog class
+    }
+}
