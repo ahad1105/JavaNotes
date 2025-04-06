@@ -1,0 +1,53 @@
+Constructors - is a special method , it has same name as class name and it does not have any return type  and everytime you create an object it will call the constructor 
+
+class Animal
+{
+    int age;
+    String name;
+    
+    public Animal()
+    {
+        age = 7;
+        name = "Ahad";
+        System.out.println("name " +name+ " age" +age);
+    }
+    
+    public static void main(String args[])
+    {
+        Animal a1 = new Animal();
+        
+    }
+}
+
+
+default and parametrised Constructors
+
+class Animal
+{
+    int age;
+    String name;
+    
+    public Animal()
+    {
+        age = 7;
+        name = "Ahad";
+        System.out.println("age " +age+ "name" +name);
+    }
+    
+    
+    public Animal(int age,String name)
+    {
+        this.age = age;
+        this.name = name;
+        System.out.println(age);
+        System.out.println(name);
+    }
+    
+    public static void main(String args[])
+    {
+        Animal a1 = new Animal(7,"Ahad");
+        
+    }
+    
+    
+}
