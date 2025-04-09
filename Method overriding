@@ -1,0 +1,43 @@
+Method overriding - child class having same method name as parent class method but different parameters or features
+
+
+
+class A
+{
+    public void setup()
+    {
+        System.out.println("In A show");
+    }
+    
+    public void test(int num)
+    {
+       System.out.println(num); 
+    }
+}
+
+class B extends A
+{
+    public void setup()       //same method as parent class but different parameters
+    {
+        System.out.println("In B show");
+    }
+    
+    public void test(int num,int num1)  //same method name as parent class different parameters
+    {
+        System.out.println(num + num1);
+    }
+}
+
+public class Main
+{
+    public static void main(String args[])
+    {
+        A obj = new A();
+        obj.setup();
+        
+        B obj1 = new B();
+        obj1.setup();
+        
+        obj1.test(3);
+    }
+}
