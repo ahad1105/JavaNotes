@@ -1,0 +1,52 @@
+Polymorphism in Java is the ability of an object to take on many forms. It allows methods or functions to behave differently based on the object or parameters passed. It is of two types:
+
+1. Compile-Time Polymorphism (Method Overloading)
+This happens when multiple methods have the same name but different parameter lists within the same class. The method to be called is determined at compile time.
+
+Example of Compile-Time Polymorphism:
+
+Java
+class Calculator {
+    // Method with two parameters
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    // Method with three parameters
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+        System.out.println(calc.add(5, 10));        // Calls the 2-parameter method
+        System.out.println(calc.add(5, 10, 15));   // Calls the 3-parameter method
+    }
+}
+2. Run-Time Polymorphism (Method Overriding)
+This happens when a subclass provides a specific implementation of a method already defined in its superclass. The method to be called is determined at runtime.
+
+Example of Run-Time Polymorphism:
+
+Java
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myDog = new Dog();  // Upcasting
+        myDog.sound();  // Calls the Dog's implementation of sound() at runtime
+    }
+}
