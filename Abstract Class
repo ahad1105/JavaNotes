@@ -1,0 +1,35 @@
+An abstract method in Java is a method that is declared without an implementation. It has no body and must be implemented by a subclass. Abstract methods are declared using the abstract keyword in an abstract class. An abstract class is a class that cannot be instantiated and is meant to be extended by other classes.
+
+Explanation:
+Abstract Class: A class that contains at least one abstract method.
+Abstract Method: A method without a body (implementation). Subclasses must override it.
+
+
+// Abstract class
+abstract class Animal {
+    // Abstract method (does not have a body)
+    abstract void makeSound();
+
+    // Regular method
+    void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+// Subclass
+class Dog extends Animal {
+    // Providing implementation for the abstract method
+    @Override
+    void makeSound() {
+        System.out.println("Bark! Bark!");
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Animal myDog = new Dog(); // Polymorphism
+        myDog.makeSound();        // Calls the abstract method's implementation
+        myDog.eat();              // Calls the regular method
+    }
+}
