@@ -1,0 +1,35 @@
+Purpose of Exception Handling
+Used to handle runtime errors and ensure the program continues execution without crashing unexpectedly.
+Allows for graceful handling of errors instead of abrupt termination.
+
+try {
+    // Code that may throw an exception
+} catch (Exception e) {
+    // Handle the exception
+}
+
+The try block encloses code that might cause an error.
+The catch block handles exceptions that arise.
+
+The Throwable class is the superclass of all exceptions in Java.
+It has two main subclasses:
+Error: Represents serious system-level failures (e.g., OutOfMemoryError).
+Exception: Used for handling predictable exceptions.
+
+The throw keyword is used to manually trigger an exception.
+
+throw new IllegalArgumentException("Invalid input!");
+
+The Finally Block
+The finally block contains code that executes regardless of exceptions.
+
+Example usage:
+
+java
+try {
+    // Code that may throw an exception
+} catch (Exception e) {
+    // Handle the exception
+} finally {
+    // Code that will always execute (e.g., closing resources)
+}
