@@ -1,0 +1,38 @@
+Threads are the smallest unit and multiple threads can be run together.
+
+Sure! Here's a **very small and simple intro on Threads**:
+
+---
+
+### 🔹 What are Threads?
+
+A **Thread** is the smallest unit of a process that can run independently. Threads help run multiple tasks **at the same time (concurrently)** in Java. Useful in automation when we want parallel test execution.
+
+---
+
+### 🔹 Basic Java Thread Program (for QA Interview):
+
+```java
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread is running...");
+    }
+
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread();
+        t1.start(); // starts the thread
+    }
+}
+```
+
+---
+
+### 🔹 Key Points for Interview:
+
+* Use `.start()` to begin a thread (not `.run()` directly).
+* `extends Thread` is one way; another is `implements Runnable`.
+* Helps in **parallel testing** or **faster execution**.
+
+---
+
+Would you like a quick example with `Runnable` too?
